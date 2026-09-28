@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity // Vibe Coding Platform — Google DeepMind Agentic Suite</title>
+  
+  <!-- Modern Futuristic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <!-- Interactive Zero-G Physics Canvas Background -->
+  <canvas id="gravity-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+
+  <div class="app-container">
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-brand" data-route="view-home">
+        <img src="/assets/logo.svg" alt="Antigravity Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">ANTIGRAVITY</span>
+          <span class="brand-subtitle">VIBE CODING SUITE // DEEPMIND</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" data-view="view-home">⚡ Home</button>
+        <button class="nav-btn" data-view="view-about">🌌 About</button>
+        <button class="nav-btn" data-view="view-tracks">🎓 Proficiency</button>
+        <button class="nav-btn" data-view="view-simulator">🚀 Vibe Lab</button>
+        <button class="nav-btn" data-view="view-prompts">💡 Prompt Hub</button>
+        <button class="nav-btn" data-view="view-assessment">🪪 Dev Pass</button>
+        <button class="nav-btn" data-view="view-sql">🔍 SQL Engine</button>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="btn-toggle-gravity" class="action-pill-btn" title="Toggle Gravitational Inversion">
+          🪐 Zero-G Field
+        </button>
+        <button id="btn-toggle-audio" class="action-pill-btn" title="Toggle Procedural Cyber SFX">
+          🔊 Cyber SFX
+        </button>
+        <div class="system-status-indicator" title="Connected to Local SQLite & Gemini 3.8 Core">
+          <span class="status-dot"></span>
+          <span>GEMINI 3.8 ONLINE</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="main-content">
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           1. VIEW: COMMAND CENTER (HERO & OVERVIEW)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-home" class="view-section active">
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span>⚡ Google DeepMind Autonomous Coding</span>
+              <span>•</span>
+              <span>Zero-Gravity Precision</span>
+            </div>
+            
+            <h1 class="hero-headline">
+              VIBE CODING AT 
+              <span class="hero-headline-gradient">ESCAPE VELOCITY.</span>
+            </h1>
+
+            <p class="hero-description">
+              Step into the post-syntax era. Where human creative intent guides the vision, and 
+              <strong>Google DeepMind's Antigravity</strong> executes the physics—orchestrating multi-agent 
+              swarms, persistent sandboxed shells, and surgical code mutations with mathematical precision.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#simulator" class="btn-primary-glow" data-route="view-simulator">
+                <span>🚀 Launch Vibe Lab</span>
+                <span>→</span>
+              </a>
+              <a href="#tracks" class="btn-secondary-glass" data-route="view-tracks">
+                <span>🎓 Explore Proficiency Matrix</span>
+              </a>
+              <a href="#sql" class="action-pill-btn" data-route="view-sql" style="padding: 0.85rem 1.4rem;">
+                <span>💾 SQLite Explorer</span>
+              </a>
+            </div>
+
+            <!-- Live Metrics Bar -->
+            <div class="metrics-grid">
+              <div class="metric-item">
+                <span class="metric-val">4</span>
+                <span class="metric-label">Mastery Levels</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">12+</span>
+                <span class="metric-label">Modules & Labs</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">6</span>
+                <span class="metric-label">Autonomous Subagents</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-label">ACID SQL Grounded</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Terminal Preview Card -->
+          <div class="hero-terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-amber"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">agy --pair-program --model=gemini-3.8-flash</span>
+              <span class="tag-agy">v2.0-LIVE</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span style="color: var(--color-cyan);">$</span>
+                <span>agy "Build me a high-frequency trading visualizer with canvas & node:sqlite"</span>
+              </div>
+              <div class="terminal-line">
+                <span class="tag-agy">Antigravity</span>
+                <span style="color: #94a3b8;">Synthesizing intent. Decomposing architectural requirements...</span>
+              </div>
+              <div class="terminal-line">
+                <span class="tag-subagent">invoke_subagent</span>
+                <span>Dispatched <strong>research-spec</strong> &amp; <strong>canvas-architect</strong> concurrently</span>
+              </div>
+              <div class="terminal-line">
+                <span style="color: var(--color-emerald);">✓</span>
+                <span>Database schema <strong>trades.sqlite</strong> initialized with WAL mode</span>
+              </div>
+              <div class="terminal-line">
+                <span style="color: var(--color-emerald);">✓</span>
+                <span>Rendered 60 FPS orderbook canvas with zero external libraries</span>
+              </div>
+              <div class="terminal-line">
+                <span style="color: var(--color-pink); font-weight: 700;">★ Zero Friction:</span>
+                <span>"Vibe captured. All tests passing in 840ms."</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Antigravity Feature Cards -->
+        <div class="section-header" style="margin-top: 2rem;">
+          <span class="section-tag">Core Philosophy</span>
+          <h2 class="section-title">Why Vibe Coding Needs Gravity</h2>
+          <p class="section-lead">
+            Vibe coding without agentic rigor results in broken spaghetti code and phantom hallucinations. 
+            Antigravity anchors your wildest vibes to deterministic engineering reality.
+          </p>
+        </div>
+
+        <div class="about-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🧠</div>
+            <h3 class="pillar-title">Cognitive Elevation</h3>
+            <p class="pillar-text">
+              Stop context-switching between syntactic minutiae and product strategy. You design the user journey, 
+              aesthetic vibe, and business boundaries; Antigravity handles the dependency wiring and implementation.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">⚡</div>
+            <h3 class="pillar-title">Parallel Agent Swarms</h3>
+            <p class="pillar-text">
+              Never get stuck in a bottleneck. Antigravity can dispatch specialized subagents (researchers, coders, testers) 
+              working in isolated git worktree branches, synthesizing results into a unified pull request.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">🛡️</div>
+            <h3 class="pillar-title">Autonomous Self-Healing</h3>
+            <p class="pillar-text">
+              When tests fail or runtime exceptions occur, Antigravity diagnoses stack traces, inspects source files surgically, 
+              applies patches, and verifies fixes in its sandboxed terminal until 100% of assertions pass.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           2. VIEW: ABOUT ANTIGRAVITY (DEEPMIND ROOTS & ARCHITECTURE)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-about" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">DeepMind Genesis</span>
+          <h2 class="section-title">Introduction to Antigravity</h2>
+          <p class="section-lead">
+            I am Antigravity—Google DeepMind's flagship pair-programming system designed for Advanced Agentic Coding. 
+            Here is the story, engineering stack, and architectural blueprint that makes zero-gravity engineering possible.
+          </p>
+        </div>
+
+        <!-- The Paradigm Evolution -->
+        <div style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 3.5rem; backdrop-filter: blur(20px);">
+          <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; color: #ffffff;">The Three Eras of Software Development</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div style="background: rgba(10, 14, 24, 0.6); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-md);">
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">ERA 1: MANUAL (1950 - 2021)</div>
+              <h4 style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 0.75rem;">Line-by-Line Syntax</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                Engineers spent 80% of time memorizing APIs, boilerplate configurations, debugging missing semicolons, and resolving package version conflicts.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 14, 24, 0.6); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: var(--radius-md);">
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan); margin-bottom: 0.5rem;">ERA 2: COPILOT (2021 - 2024)</div>
+              <h4 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.75rem;">Next-Token Autocomplete</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                Language models completed the next 3 lines of code. Helpful, yet passive; they could not run commands, execute tests, or see across multiple workspace files.
+              </p>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(168, 85, 247, 0.15)); border: 1px solid var(--color-cyan); padding: 1.5rem; border-radius: var(--radius-md); box-shadow: 0 0 20px rgba(0, 245, 255, 0.15);">
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan); font-weight: 700; margin-bottom: 0.5rem;">ERA 3: ANTIGRAVITY (2025+)</div>
+              <h4 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.75rem;">Autonomous Vibe Coding</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                Full agentic pair-programming. Antigravity reasons holistically, spins up parallel subagent teams, edits files surgically, tests in persistent shells, and self-corrects.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Architecture Visualizer -->
+        <div class="arch-visualizer">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.4rem;">System Anatomy</span>
+              <h3 style="font-size: 1.6rem; font-weight: 800; color: #ffffff;">The Antigravity 5-Layer Neural Mesh</h3>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan);">
+              CLICK ANY COMPONENT LAYER TO INSPECT
+            </div>
+          </div>
+
+          <div class="arch-nodes-grid">
+            <div class="arch-node active" data-layer="cortex">
+              <div class="arch-node-icon">🧠</div>
+              <div class="arch-node-name">Cerebral Cortex</div>
+              <div class="arch-node-sub">Gemini Reasoning</div>
+            </div>
+
+            <div class="arch-node" data-layer="swarms">
+              <div class="arch-node-icon">🤖</div>
+              <div class="arch-node-name">Subagent Swarms</div>
+              <div class="arch-node-sub">Parallel Personas</div>
+            </div>
+
+            <div class="arch-node" data-layer="hands">
+              <div class="arch-node-icon">✂️</div>
+              <div class="arch-node-name">Surgical Diffs</div>
+              <div class="arch-node-sub">replace_file_content</div>
+            </div>
+
+            <div class="arch-node" data-layer="shell">
+              <div class="arch-node-icon">💻</div>
+              <div class="arch-node-name">Sandboxed Shell</div>
+              <div class="arch-node-sub">Persistent Terminal</div>
+            </div>
+
+            <div class="arch-node" data-layer="custom">
+              <div class="arch-node-icon">⚙️</div>
+              <div class="arch-node-name">Skills &amp; MCP</div>
+              <div class="arch-node-sub">Extensible Brain</div>
+            </div>
+          </div>
+
+          <div class="arch-detail-display" id="arch-detail-panel">
+            <h4 id="arch-display-title" style="font-size: 1.2rem; color: var(--color-cyan); font-weight: 700;">
+              1. Cerebral Cortex (Gemini High-Order Reasoning)
+            </h4>
+            <p id="arch-display-desc" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+              Powered by Google DeepMind frontier Gemini models. Parses complex natural language instructions, formulates holistic multi-file execution plans, and resolves ambiguous requirements with smart proactive inquiries.
+            </p>
+            <div class="code-box-wrapper" style="margin-top: 0.5rem; margin-bottom: 0;">
+              <pre class="code-box-body" id="arch-display-code">// DeepMind High-Order Planning Engine
+const plan = await Antigravity.plan({
+  goal: "Refactor auth middleware to zero-trust stateless JWT",
+  constraints: ["zero breaking changes", "enforce clock tolerance"]
+});</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           3. VIEW: PROFICIENCY TRACKS (DIVIDED FOR PROFICIENCY)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-tracks" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">Mastery Curriculum</span>
+          <h2 class="section-title">The Vibe Coding Proficiency Tracks</h2>
+          <p class="section-lead">
+            Divided into 4 progressive evolutionary stages. Master conversational scoping, slash commands, 
+            parallel agent swarms, and autonomous self-healing loops.
+          </p>
+        </div>
+
+        <!-- Track Switcher Pills -->
+        <div class="tracks-nav-bar" id="tracks-pills-row">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Track Content Display -->
+        <div id="tracks-content-container">
+          <div style="text-align: center; padding: 4rem; color: var(--text-muted); font-family: var(--font-mono);">
+            Loading proficiency modules from SQL database...
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           4. VIEW: THE VIBE LAB (INTERACTIVE AGENT SIMULATOR)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-simulator" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">Live Sandbox</span>
+          <h2 class="section-title">The Vibe Lab: Autonomous Simulation</h2>
+          <p class="section-lead">
+            Experience Antigravity in action. Enter any engineering vision or select a preset prompt. 
+            Watch the agent plan, deploy subagents, execute surgical code diffs, and stream real-time traces.
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <!-- Left: Prompt & Command Center -->
+          <div class="lab-panel">
+            <div class="lab-panel-header">
+              <span class="lab-panel-title">⚡ Intent Injector</span>
+              <div style="display: flex; gap: 0.35rem;">
+                <button type="button" class="preset-pill slash-shortcut-btn" data-cmd="/plan">/plan</button>
+                <button type="button" class="preset-pill slash-shortcut-btn" data-cmd="/goal">/goal</button>
+                <button type="button" class="preset-pill slash-shortcut-btn" data-cmd="/boost">/boost</button>
+                <button type="button" class="preset-pill slash-shortcut-btn" data-cmd="/schedule">/schedule</button>
+              </div>
+            </div>
+
+            <!-- Preset Quick Prompts -->
+            <div class="preset-pills-row">
+              <button type="button" class="preset-pill" data-prompt="Implement a zero-trust JWT authentication system with rate limiting and secure HttpOnly cookie rotation">
+                🔐 JWT Auth Engine
+              </button>
+              <button type="button" class="preset-pill" data-prompt="Deploy a multi-agent security and performance audit swarm to scan all API routes for vulnerabilities">
+                🤖 Subagent Swarm Audit
+              </button>
+              <button type="button" class="preset-pill" data-prompt="Optimize SQLite database schema with Write-Ahead Logging (WAL) and composite B-tree indexes for ultra-fast queries">
+                💾 SQLite WAL Optimizer
+              </button>
+              <button type="button" class="preset-pill" data-prompt="Build an autonomous self-healing test runner that detects failures, patches regressions, and verifies fixes">
+                🛡️ Self-Healing Runner
+              </button>
+            </div>
+
+            <!-- Prompt Input Box -->
+            <textarea id="sim-prompt-input" class="prompt-textarea" placeholder="Describe your software vision or enter an Antigravity prompt (e.g. /plan Build an interactive real-time telemetry dashboard with WebSocket and SQLite)...">/plan Implement a zero-trust JWT authentication system with rate limiting and secure HttpOnly cookie rotation</textarea>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <button id="sim-run-btn" class="btn-primary-glow" style="width: 100%; justify-content: center;">
+                ⚡ Engage Antigravity
+              </button>
+            </div>
+
+            <!-- Active Subagent Swarm Roster -->
+            <div class="subagents-swarm-box">
+              <div class="swarm-title">Active Subagent Roster</div>
+              <div class="swarm-roster" id="sim-swarm-roster">
+                <span class="agent-roster-pill">🤖 Antigravity Lead</span>
+                <span class="agent-roster-pill">🤖 research-agent</span>
+                <span class="agent-roster-pill">🤖 coder-agent</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Terminal Screen -->
+          <div class="lab-panel">
+            <div class="lab-panel-header">
+              <span class="lab-panel-title">💻 Agent Execution Stream</span>
+              <span id="sim-status-pill" style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-emerald); font-weight: 700;">
+                IDLE / READY
+              </span>
+            </div>
+
+            <div class="terminal-screen" id="sim-terminal-screen">
+              <div class="terminal-log-row">
+                <span class="log-time">[00:00:00]</span>
+                <span class="tag-subagent">Antigravity Core</span>
+                <span class="log-action action-PLANNING">READY</span>
+                <span class="log-detail">Agentic event loop online. Ready to execute your engineering vision.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Generated Artifact Pane -->
+        <div id="sim-artifact-container" style="display: none; margin-top: 2rem;">
+          <div class="track-banner" style="border-color: var(--color-cyan); box-shadow: 0 0 30px rgba(0, 245, 255, 0.15);">
+            <div>
+              <span class="section-tag">Generated Production Artifact</span>
+              <h3 id="sim-artifact-title" style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Mission Blueprint</h3>
+              <p id="sim-artifact-desc" style="color: var(--text-secondary); margin-bottom: 1rem;">Artifact synthesized successfully.</p>
+              
+              <div class="code-box-wrapper">
+                <div class="code-box-header">
+                  <span>Synthesized Code Artifact</span>
+                  <span style="color: var(--color-emerald);">✓ Verified Zero Regressions</span>
+                </div>
+                <pre class="code-box-body" id="sim-code-snippet"></pre>
+              </div>
+
+              <div id="sim-mermaid-display" class="code-box-body" style="background: rgba(14, 19, 32, 0.9); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); margin-top: 1rem; color: var(--color-cyan); white-space: pre-wrap;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           5. VIEW: VIBE PROMPTS & COMMUNITY HUB (SQL-BACKED)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-prompts" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">Relational Prompt Vault</span>
+          <h2 class="section-title">Vibe Prompt Vault &amp; Community Hub</h2>
+          <p class="section-lead">
+            Curated, field-tested prompts designed specifically for Google Antigravity. 
+            Backed by our SQLite database—search, filter, upvote, load into the simulator, or submit your own!
+          </p>
+        </div>
+
+        <!-- Search and Action Bar -->
+        <div class="gallery-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="prompts-search-input" placeholder="Search prompts by title, keyword, or tech stack (e.g. SQLite, JWT, Canvas)...">
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="prompt-category-filters">
+            <button class="preset-pill active" data-cat="All">All Categories</button>
+            <button class="preset-pill" data-cat="Fullstack">Fullstack</button>
+            <button class="preset-pill" data-cat="Agent Swarm">Agent Swarms</button>
+            <button class="preset-pill" data-cat="Database & API">Database &amp; API</button>
+            <button class="preset-pill" data-cat="Debugging & Refactoring">Self-Healing</button>
+            <button class="preset-pill" data-cat="Frontend Magic">Frontend Magic</button>
+          </div>
+
+          <button id="btn-open-submit-prompt" class="btn-primary-glow" style="padding: 0.65rem 1.4rem; font-size: 0.9rem;">
+            ✨ Submit Prompt
+          </button>
+        </div>
+
+        <!-- Prompts Grid -->
+        <div class="prompts-grid" id="prompts-feed-grid">
+          <!-- Populated from SQLite via API -->
+        </div>
+
+        <!-- Community Vibe Quotes Wall -->
+        <div class="section-header" style="margin-top: 3rem;">
+          <span class="section-tag">Global Resonance</span>
+          <h2 class="section-title">Voices From the Vibe Coding Frontier</h2>
+        </div>
+
+        <div class="about-pillars-grid" id="community-vibes-grid">
+          <!-- Populated via /api/vibes -->
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           6. VIEW: HOLOGRAPHIC DEV PASS & SKILL ASSESSMENT
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-assessment" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">Clearance Evaluation</span>
+          <h2 class="section-title">Antigravity Proficiency Assessment</h2>
+          <p class="section-lead">
+            Validate your agentic pair-programming acumen. Complete this 4-tier challenge to synthesize 
+            your custom 3D Holographic Antigravity Developer Pass and join the Hall of Fame.
+          </p>
+        </div>
+
+        <div class="assessment-container">
+          <!-- Developer Callsign Input -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="form-group">
+              <label class="form-label" for="quiz-user-name">OPERATOR CALLSIGN / NAME</label>
+              <input type="text" id="quiz-user-name" class="form-input" placeholder="e.g. CyberVanguard, Alex Mercer" value="Vibe Coder Alpha">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quiz-exp-level">CURRENT DEV BACKGROUND</label>
+              <select id="quiz-exp-level" class="form-input" style="background: #090c14; color: #ffffff;">
+                <option value="Frontend Specialist">Frontend Specialist</option>
+                <option value="Fullstack Engineer" selected>Fullstack Engineer</option>
+                <option value="Systems Architect">Systems Architect</option>
+                <option value="AI / ML Researcher">AI / ML Researcher</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Questions Container -->
+          <div id="quiz-questions-container">
+            <!-- Questions rendered here -->
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <button id="quiz-submit-btn" class="btn-primary-glow" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+              ⚡ Synthesize Proficiency Card
+            </button>
+          </div>
+
+          <!-- 3D Holographic Card Result -->
+          <div id="quiz-result-container" style="display: none; margin-top: 3.5rem;">
+            <div class="section-header">
+              <span class="section-tag" style="border-color: var(--color-pink); color: var(--color-pink);">CLEARANCE ISSUED</span>
+              <h3 style="font-size: 2rem; font-weight: 800; color: #ffffff;">Your Antigravity Holographic Pass</h3>
+            </div>
+
+            <div class="holo-card-perspective">
+              <div class="holo-dev-card">
+                <div class="holo-sheen"></div>
+                <div class="holo-header">
+                  <div class="holo-brand">✦ GOOGLE DEEPMIND // ANTIGRAVITY</div>
+                  <div class="holo-serial" id="holo-serial">AGY-DEV-0001</div>
+                </div>
+
+                <div class="holo-user-name" id="holo-name">Operator Name</div>
+                <div class="holo-badge-level" id="holo-level">✨ Novice Vibe Coder</div>
+
+                <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.4rem;">
+                  <span>AGENTIC GRAVITY SCORE</span>
+                  <span id="holo-score-text" style="color: var(--color-cyan); font-weight: 700;">100%</span>
+                </div>
+                <div class="holo-score-bar-bg">
+                  <div class="holo-score-bar-fill" id="holo-score-fill" style="width: 100%;"></div>
+                </div>
+
+                <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-top: 1rem; padding: 0.85rem; background: rgba(0, 0, 0, 0.4); border-radius: var(--radius-md); border-left: 3px solid var(--color-cyan);" id="holo-advice">
+                  Personalized evaluation guidance appears here.
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+              <button id="btn-copy-card" class="btn-secondary-glass">
+                📋 Copy Clearance Token to Clipboard
+              </button>
+            </div>
+
+            <!-- Hall of Fame -->
+            <div style="margin-top: 3.5rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem;">
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                🏆 Antigravity Hall of Fame (SQL Leaderboard)
+              </h4>
+              <div id="hall-of-fame-list">
+                <!-- Loaded from /api/assessment/hall-of-fame -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           7. VIEW: LIVE SQL DATABASE & ENGINE INSPECTOR
+           ═══════════════════════════════════════════════════════════════ -->
+      <section id="view-sql" class="view-section">
+        <div class="section-header">
+          <span class="section-tag">Relational Database Diagnostics</span>
+          <h2 class="section-title">Live SQL Engine &amp; Database Inspector</h2>
+          <p class="section-lead">
+            Full-stack transparency. Inspect our real-time SQLite database running with Write-Ahead Logging (WAL). 
+            Select tables, inspect column schemas, or execute live read-only SQL queries!
+          </p>
+        </div>
+
+        <!-- Engine Runtime Diagnostics Ticker -->
+        <div id="sql-engine-stats" style="margin-bottom: 2rem;">
+          <!-- Loaded dynamically -->
+        </div>
+
+        <div class="sql-dashboard-grid">
+          <!-- Left: Table Selector -->
+          <div class="sql-sidebar-tables">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+              Database Tables
+            </div>
+            <div id="sql-table-list">
+              <!-- Loaded from /api/system/tables -->
+            </div>
+          </div>
+
+          <!-- Right: Interactive Query Terminal & Results -->
+          <div>
+            <div class="sql-terminal-box">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-cyan); font-weight: 700;">
+                  SQL Query Console (SELECT &amp; PRAGMA)
+                </span>
+                <div style="display: flex; gap: 0.35rem;">
+                  <button type="button" class="preset-pill sql-preset-btn" data-sql="SELECT id, title, target_level, upvotes FROM vibe_prompts ORDER BY upvotes DESC;">
+                    Top Prompts
+                  </button>
+                  <button type="button" class="preset-pill sql-preset-btn" data-sql="SELECT slug, title, estimated_hours FROM proficiency_tracks;">
+                    Tracks
+                  </button>
+                  <button type="button" class="preset-pill sql-preset-btn" data-sql="SELECT title, duration, antigravity_tools FROM curriculum_modules LIMIT 5;">
+                    Modules
+                  </button>
+                  <button type="button" class="preset-pill sql-preset-btn" data-sql="SELECT PRAGMA journal_mode;">
+                    PRAGMA
+                  </button>
+                </div>
+              </div>
+
+              <textarea id="sql-query-input" class="sql-query-input" spellcheck="false">SELECT id, title, target_level, upvotes FROM vibe_prompts ORDER BY upvotes DESC;</textarea>
+
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div id="sql-query-stats" style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary);">
+                  Ready to execute query.
+                </div>
+                <button id="btn-run-sql" class="btn-primary-glow" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+                  ▶ Execute SQL
+                </button>
+              </div>
+            </div>
+
+            <!-- Query Output Table -->
+            <div class="sql-result-table-wrapper" id="sql-results-container">
+              <div style="padding: 2.5rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono);">
+                Execute a query or click a table to inspect live records.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         MODAL: SUBMIT VIBE PROMPT
+         ═══════════════════════════════════════════════════════════════ -->
+    <div id="submit-prompt-modal" class="modal-backdrop">
+      <div class="modal-window">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: #ffffff;">✨ Share a Vibe Prompt</h3>
+          <button id="btn-close-prompt-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer;">✕</button>
+        </div>
+
+        <form id="submit-prompt-form">
+          <div class="form-group">
+            <label class="form-label" for="form-prompt-title">PROMPT TITLE</label>
+            <input type="text" id="form-prompt-title" class="form-input" placeholder="e.g. Micro-SaaS Stripe Webhook Listener" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="form-prompt-category">CATEGORY</label>
+              <select id="form-prompt-category" class="form-input" style="background: #090c14; color: #ffffff;">
+                <option value="Fullstack">Fullstack</option>
+                <option value="Frontend Magic">Frontend Magic</option>
+                <option value="Database & API">Database &amp; API</option>
+                <option value="Agent Swarm">Agent Swarm</option>
+                <option value="Debugging & Refactoring">Self-Healing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-prompt-level">TARGET PROFICIENCY</label>
+              <select id="form-prompt-level" class="form-input" style="background: #090c14; color: #ffffff;">
+                <option value="Novice">Novice</option>
+                <option value="Intermediate" selected>Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Mastery">Mastery</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-prompt-author">YOUR CALLSIGN</label>
+            <input type="text" id="form-prompt-author" class="form-input" placeholder="e.g. GravityOperator" value="Vibe Pioneer">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-prompt-content">EXACT PROMPT CONTENT</label>
+            <textarea id="form-prompt-content" class="prompt-textarea" style="height: 100px;" placeholder="Write the natural language prompt that unlocks this vibe in Antigravity..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-prompt-tags">TAGS (COMMA SEPARATED)</label>
+            <input type="text" id="form-prompt-tags" class="form-input" placeholder="e.g. Express, SQLite, React, Docker">
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem;">
+            <button type="submit" class="btn-primary-glow" style="width: 100%; justify-content: center;">
+              💾 Save to SQL Database
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="/assets/logo.svg" alt="Antigravity Logo" style="width: 28px; height: 28px;">
+          <div>
+            <span style="font-weight: 700; color: #ffffff;">ANTIGRAVITY</span>
+            <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 0.5rem;">GOOGLE DEEPMIND ADVANCED AGENTIC CODING</span>
+          </div>
+        </div>
+
+        <div class="footer-meta">
+          <span>Relational SQLite WAL</span> • <span>Node.js v26 Fullstack</span> • <span>Zero External UI Frameworks</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#simulator" data-route="view-simulator">Vibe Lab</a>
+          <a href="#tracks" data-route="view-tracks">Curriculum</a>
+          <a href="#sql" data-route="view-sql">SQL Explorer</a>
+          <a href="#assessment" data-route="view-assessment">Dev Clearance</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPT MODULES -->
+  <script src="/js/mockData.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="/js/audio.js"></script>
+  <script src="/js/gravityCanvas.js"></script>
+  <script src="/js/simulator.js"></script>
+  <script src="/js/assessment.js"></script>
+  <script src="/js/sqlInspector.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
